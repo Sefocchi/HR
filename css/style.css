@@ -1,0 +1,617 @@
+@import url("reset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-titulos: 'Handlee', cursive;
+    --color-principal: #fa573a;
+    --colorsecundario: #21242e;
+    --fontsize: 1em;
+    --margingrid: 1em;
+    --anchomaximo: 68.750em;
+}
+
+img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--fontsize);
+}
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 1.25em 0em;
+}
+
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-size: 1.2em;
+
+}
+
+header .nav-top a span {
+    color: white;
+    display: none;
+}
+
+
+header nav {
+    background-color: white;
+    padding: 1.25em;
+}
+
+header nav .container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+header nav .container .logo {
+    max-width: 6.25em;
+}
+
+header nav .container .hamburguesa {
+    width: 1.875em;
+    cursor: pointer;
+}
+
+header nav .container .hamburguesa>div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
+}
+
+header nav .container ul.menu {
+    width: 100%;
+    text-align: center;
+}
+
+header nav .container .menu li a {
+    display: block;
+    padding: 1.25em;
+    text-decoration: none;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .container .menu li:last-child a {
+    border: 0px;
+}
+
+
+header nav .container .menu li :is(a:hover, .activo) {
+    color: var(--color-principal);
+}
+
+footer {
+    background-color: var(--colorsecundario);
+    padding: 1.25em 0em;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: var(--color-principal);
+}
+
+.flecha a {
+    display: block;
+    color: var(--color-principal);
+    position: fixed;
+    bottom: 1.25em;
+    right: 1.25em;
+    font-size: 300%;
+}
+
+.hero {
+    background-color: #999;
+    background-image: url(../images/fondo.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    color: white;
+    display: flex;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2em;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.25em;
+}
+
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    padding: 1.15em;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--color-principal);
+}
+
+:is(h2, .boton) {
+    margin: var(--margingrid) 0;
+}
+
+.hero p {
+    font-size: 1.15em;
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+}
+
+.boton i {
+    transition: 1s;
+}
+
+.boton:hover i {
+    transform: translateX(5px) scale(1.20);
+}
+
+.hero ul {
+    display: flex;
+    width: 10em;
+    justify-content: space-between;
+}
+
+.hero ul a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.hero ul a:hover {
+    color: var(--color-principal);
+    font-size: 3em;
+}
+
+main section {
+    padding: 2.125em 1.5em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuente-titulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--color-principal);
+}
+
+main section .underline {
+    position: relative;
+    width: 6.250em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700;
+    text-align: center;
+}
+
+main section .underline span {
+    position: absolute;
+    top: -0.4em;
+}
+
+main section .underline hr {
+    color: var(--color-principal);
+}
+
+
+main .grid article {
+    border: 0px;
+    border-bottom: 2px solid #aaa;
+
+}
+
+main .grid i:is(.fa-cogs, .fa-truck, .fa-heart) {
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+    font-size: 1.25em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+main .grid i.fa-truck {
+    transform: scaleX(-1);
+
+}
+
+main .grid h3 {
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0.3em 0;
+}
+
+main .grid p {
+    color: var(--colorsecundario);
+    font-size: 0.95em;
+    margin: 0.5em 0em;
+    line-height: 1.25em;
+}
+
+main .grid a {
+    display: block;
+    width: 100%;
+    color: var(--color-principal);
+    text-decoration: none;
+    margin: 0.8em 0;
+    font-weight: 700;
+}
+
+main #aboutus {
+    margin-bottom: 4.375em;
+}
+
+main section .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+main section .flex h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+main section .flex h4 {
+    font-size: 1em;
+    margin: var(--margingrid) 0;
+    color: var(--color-principal);
+}
+
+main section .flex figure.imagen {
+    width: 95%;
+    margin: 2.5em auto;
+}
+
+main section .flex figure.imagen .marco {
+    border: 3px solid var(--color-principal);
+    transition: 1s;
+    transform: rotateZ(10deg)
+}
+
+main section .flex figure.imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main section .flex figure.imagen:hover :is(.marco, .marco img) {
+    transform: rotateZ(0deg);
+}
+
+main .flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+main .flex-2 article {
+    width: 40%;
+    margin: 1em;
+    position: relative;
+}
+
+main .flex-2 article .fecha {
+    position: absolute;
+    background-color: rgba(250, 87, 58, 0.7);
+    padding: 0.8em;
+    height: 4em;
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.4em;
+    transition: 1s;
+}
+
+main .flex-2 article .fecha:hover {
+    color: var(--colorsecundario);
+}
+
+main .flex-2 article h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: var(--margingrid) 0;
+}
+
+main .flex-2 article small {
+    font-size: 0.8em;
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+main .flex-2 article p {
+    color: var(--colorsecundario);
+    font-size: 0.7em;
+    margin: var(--margingrid) 0em;
+    line-height: 1.5em;
+}
+
+main .flex-2 article a {
+    font-size: 0.8em;
+    color: var(--color-principal);
+    font-weight: 700;
+    transition: 1s;
+    text-decoration: none;
+}
+
+main .flex-2 article a:hover {
+    font-size: 1.2em;
+    color: var(--color-secundario);
+}
+
+section#menu {
+    background-color: var(--colorsecundario);
+    padding-bottom: 6em;
+}
+
+section#menu h2 {
+    color: white;
+}
+
+.flex-3 {
+    width: 95%;
+}
+
+.flex-3 ul li {
+    color: white;
+    margin: var(--margingrid) 0em;
+    font-size: 0.8em;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.flex-3 ul li:hover {
+    background-color: var(--color-principal);
+}
+
+.flex-3 .offers {
+    margin: 2em 0;
+}
+
+.flex-3 :is(.offers h3, .meal h3) {
+    color: white;
+    font-weight: 700;
+}
+
+.flex-3 .offers div.bar {
+    background-color: var(--color-principal);
+    height: 0.1em;
+    width: 3em;
+    margin: 0.7em 0em;
+}
+
+.flex-3 :is(.offers p, .meal p) {
+    color: #aaa;
+    font-size: 0.7em;
+    margin: var(--margingrid) 0em;
+    line-height: 1.5em;
+}
+
+.flex-3 .meal {
+    width: 90%;
+    margin: 2em auto;
+}
+
+.flex-3 .meal a {
+    display: block;
+    font-size: 0.8em;
+    color: var(--color-principal);
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 2.5em;
+}
+
+.flex-3 .meal h3 {
+    margin: 1em 0;
+}
+
+.flex-3 .meal span {
+    color: var(--color-principal);
+    margin-left: 1em;
+}
+
+@media (min-width: 600px) {
+    main .grid article:last-child {
+        width: 100%;
+    }
+
+    main .grid {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main .grid article {
+        border: 0px;
+        height: auto;
+        width: 40%;
+        border-left: 2px solid #aaa;
+        margin: var(--margingrid);
+        padding: 0 1em;
+    }
+
+    main section .flex {
+        margin-top: 2.5em;
+        flex-direction: row;
+    }
+
+    main section .flex figure.imagen {
+        margin: 0 2.5em;
+        width: 130%;
+    }
+}
+
+@media (min-width: 768px) {
+    header .nav-top a span {
+        display: inline;
+    }
+
+    footer {
+        padding: 1.25em 1em;
+        text-align: left;
+    }
+
+    main .grid article:last-child {
+        width: 100%;
+    }
+
+    main .grid {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main .grid article {
+        border: 0px;
+        height: auto;
+        width: 40%;
+        border-left: 2px solid #aaa;
+        margin: var(--margingrid);
+        padding: 0 1em;
+
+    }
+
+    main section .flex figure.imagen .marco {
+        margin: 0 2em;
+        width: auto;
+    }
+
+    main .flex-2 {
+        flex-wrap: nowrap;
+    }
+
+    main .flex-2 article {
+        width: 40%;
+    }
+
+    .flex-3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flex-3>div {
+        width: 20%;
+    }
+
+    .flex-3 .meal {
+        width: 65%;
+    }
+
+    .meal article {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .meal article:nth-child(2) {
+        margin: 2em 0;
+    }
+
+    .meal article figure {
+        width: 25%;
+    }
+
+    .meal article div {
+        width: 65%;
+    }
+
+    .flex-3 ul li {
+
+        padding: 0.8em;
+    }
+
+    .flex-3 .offers {
+        margin: 6em 0;
+    }
+
+    .flex-3 .meal h3 {
+        margin: 0em 0;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    header nav .container .hamburguesa {
+        display: none;
+    }
+
+    header nav .container ul.menu {
+        width: auto;
+        text-align: left;
+    }
+
+    header nav .container .menu li a {
+        padding: 0em 1.25em;
+        border-bottom: 0px;
+    }
+
+    header nav .container ul.menu li {
+        display: inline-block;
+    }
+
+    main .grid {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    main .grid article {
+        border: 0px;
+        width: 33.333%;
+        border-left: 2px solid #aaa;
+        margin: var(--margingrid);
+        padding: 0 1em;
+    }
+
+    main .grid article:last-child {
+        width: 33.333%;
+    }
+}
